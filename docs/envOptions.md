@@ -2,13 +2,13 @@
 
 - `CONTAINER_LOG_TAIL`: Specifies the number of lines to display from container logs. Defaults to 50 lines.
 
-- `ICTEST_CONFIGURED_CHAINS`: override the default configuredChains.yaml embedded config.
+- `ICTEST_CONFIGURED_CHAINS`: overrides the default configuredChains.yaml embedded config.
 
 - `ICTEST_DEBUG`: extra debugging information for test execution.
 
 - `ICTEST_HOME`: The folder to use as the home / working directory.
 
-- `ICTEST_SKIP_FAILURE_CLEANUP`: skip cleanup of the temporary directory on a test failure.
+- `ICTEST_SKIP_FAILURE_CLEANUP`: skips cleanup of the temporary directory on a test failure.
 
 - `KEEP_CONTAINERS`: Prevents testnet cleanup after completion.
 
