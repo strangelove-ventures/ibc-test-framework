@@ -47,7 +47,7 @@ type Broadcaster struct {
 	clientContextOptions []ClientContextOpt
 }
 
-// NewBroadcaster returns a instance of Broadcaster which can be used with broadcast.Tx to
+// NewBroadcaster returns an instance of Broadcaster which can be used with broadcast.Tx to
 // broadcast messages sdk messages.
 func NewBroadcaster(t *testing.T, chain *CosmosChain) *Broadcaster {
 	t.Helper()

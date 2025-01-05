@@ -131,7 +131,7 @@ func (tn *ChainNode) ExecuteContract(ctx context.Context, keyName string, contra
 	return txResp, nil
 }
 
-// QueryContract performs a smart query, taking in a query struct and returning a error with the response struct populated.
+// QueryContract performs a smart query, taking in a query struct and returning an error with the response struct populated.
 func (tn *ChainNode) QueryContract(ctx context.Context, contractAddress string, queryMsg any, response any) error {
 	var query []byte
 	var err error
