@@ -162,6 +162,7 @@ func (tn *ChainNode) NewClient(addr string) error {
 func (tn *ChainNode) NewSidecarProcess(
 	ctx context.Context,
 	preStart bool,
+	startCheck func(int) error,
 	processName string,
 	cli *dockerclient.Client,
 	networkID string,
@@ -171,7 +172,7 @@ func (tn *ChainNode) NewSidecarProcess(
 	startCmd []string,
 	env []string,
 ) error {
-	s := NewSidecar(tn.log, true, preStart, tn.Chain, cli, networkID, processName, tn.TestName, image, homeDir, tn.Index, ports, startCmd, env)
+	s := NewSidecar(tn.log, true, preStart, startCheck, tn.Chain, cli, networkID, processName, tn.TestName, image, homeDir, tn.Index, ports, startCmd, env)
 
 	v, err := cli.VolumeCreate(ctx, volumetypes.CreateOptions{
 		Labels: map[string]string{

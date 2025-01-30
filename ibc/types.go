@@ -301,6 +301,7 @@ type SidecarConfig struct {
 	StartCmd         []string
 	Env              []string
 	PreStart         bool
+	StartCheck       func(int) error
 	ValidatorProcess bool
 }
 

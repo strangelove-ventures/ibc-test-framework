@@ -26,7 +26,8 @@ type SidecarProcess struct {
 	validatorProcess bool
 
 	// If true this process should be started before the chain or validator, otherwise it should be explicitly started after.
-	preStart bool
+	preStart   bool
+	startCheck func(int) error
 
 	ProcessName string
 	TestName    string
@@ -48,6 +49,7 @@ func NewSidecar(
 	log *zap.Logger,
 	validatorProcess bool,
 	preStart bool,
+	startCheck func(int) error,
 	chain ibc.Chain,
 	dockerClient *dockerclient.Client,
 	networkID, processName, testName string,
@@ -73,6 +75,7 @@ func NewSidecar(
 		Index:            index,
 		Chain:            chain,
 		preStart:         preStart,
+		startCheck:       startCheck,
 		validatorProcess: validatorProcess,
 		ProcessName:      processName,
 		TestName:         testName,
