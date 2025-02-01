@@ -63,7 +63,7 @@ require (
 	golang.org/x/tools v0.23.0
 	google.golang.org/grpc v1.65.0
 	gopkg.in/yaml.v3 v3.0.1
-	modernc.org/sqlite v1.31.1
+	modernc.org/sqlite v1.34.5
 )
 
 require (
@@ -281,12 +281,9 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gotest.tools/v3 v3.5.1 // indirect
 	lukechampine.com/blake3 v1.2.1 // indirect
-	modernc.org/gc/v3 v3.0.0-20240107210532-573471604cb6 // indirect
 	modernc.org/libc v1.55.3 // indirect
 	modernc.org/mathutil v1.6.0 // indirect
 	modernc.org/memory v1.8.0 // indirect
-	modernc.org/strutil v1.2.0 // indirect
-	modernc.org/token v1.1.0 // indirect
 	nhooyr.io/websocket v1.8.7 // indirect
 	pgregory.net/rapid v1.1.0 // indirect
 	rsc.io/tmplfunc v0.0.3 // indirect
